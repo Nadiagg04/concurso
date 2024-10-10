@@ -7,12 +7,22 @@ on:
 
 jobs:
   build:
-
     runs-on: windows-latest
 
     steps:
       - name: Checkout del código
         uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas
+        run: npm test
 
       - name: Imprimir un mensaje de Hola Mundo
         run: echo "Hola mundo"
