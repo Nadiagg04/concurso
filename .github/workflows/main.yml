@@ -28,13 +28,9 @@ jobs:
       - name: Imprimir un mensaje de Hola Mundo
         run: echo "Hola mundo"
 
-      - name: Verificar una condición personalizada
-        run: |
-          asset=1
-          if [ $asset -eq 1 ]; then
-            echo "La condición se cumple: asset es igual a 1"
-          else
-            echo "La condición no se cumple"
-            exit 1
-          fi
+      - import requests
+        def test_add_and_retrieve_contact():
+          login_data = {
+              "email": "phytontest@test.com",
+              "password": "Testpass"
 
