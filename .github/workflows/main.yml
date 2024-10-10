@@ -28,9 +28,6 @@ jobs:
       - name: Imprimir un mensaje de Hola Mundo
         run: echo "Hola mundo"
 
-      - import requests
-        def test_add_and_retrieve_contact():
-          login_data = {
-              "email": "phytontest@test.com",
-              "password": "Testpass"
-
+      - name: Pytwst
+        run: pytest
+      
